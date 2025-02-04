@@ -18,6 +18,8 @@ export const PlanExpiredBanner = () => {
   const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   useEffect(() => {
+    console.log('🚀 TCL: PlanExpiredBanner -> user?.details?.planDetails?.status', user?.details?.planDetails?.status)
+    console.log('🚀 TCL: PlanExpiredBanner -> isPlanExpiredBannerClosed', isPlanExpiredBannerClosed)
     if (
       user?.details?.planDetails?.status === APP_CONSTANTS.SUBSCRIPTION_STATUS.CANCELLED &&
       !isPlanExpiredBannerClosed

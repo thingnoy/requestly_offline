@@ -1,37 +1,37 @@
-export interface UserAuth {
-  loggedIn: boolean;
-  isLimitReached?: boolean;
+export interface UserAuth
+{
   details?: {
-    profile?: {
-      uid: string;
-      email: string;
-      displayName: string;
-      isEmailVerified: boolean;
-      photoURL: string;
-      providerId: string;
-      isSyncEnabled?: boolean;
-      isBackupEnabled?: boolean;
-    };
-    isLoggedIn: boolean;
-    username: string;
-
     isBackupEnabled?: boolean;
-    isSyncEnabled?: boolean;
+    isLoggedIn: boolean;
     isPremium?: boolean;
+    isSyncEnabled?: boolean;
+    organization?: any;
     planDetails?: {
       planId: string;
-      status: string;
-      type: "team" | "individual";
       planName: string;
+      status: string;
       subscription: {
         cancelAtPeriodEnd: boolean;
-        endDate: string;
-        startDate: string;
-        id: string;
         duration: "annually" | "monthly";
+        endDate: string;
+        id: string;
         quantity: number;
+        startDate: string;
       };
+      type: "team" | "individual";
     };
-    organization?: any;
+    profile?: {
+      displayName: string;
+      email: string;
+      isBackupEnabled?: boolean;
+      isEmailVerified: boolean;
+      isSyncEnabled?: boolean;
+      photoURL: string;
+      providerId: string;
+      uid: string;
+    };
+    username: string;
   };
+  isLimitReached?: boolean;
+  loggedIn: boolean;
 }

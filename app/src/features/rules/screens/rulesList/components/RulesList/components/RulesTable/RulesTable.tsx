@@ -147,7 +147,7 @@ const RulesTable: React.FC<Props> = ({ records, loading, searchValue, allRecords
       }, []);
 
       if (activePremiumRules.length) {
-        recordsStatusUpdateAction(activePremiumRules, RecordStatus.INACTIVE);
+        // recordsStatusUpdateAction(activePremiumRules, RecordStatus.INACTIVE);
       }
       setIsPremiumRulesToggleChecked(true);
     }

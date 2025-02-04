@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /bin/bash
 
 app=$1
 env=$2
@@ -12,15 +12,15 @@ if [[ -z $2 ]]; then
 fi
 
 if [[ "$env" == "local" ]]; then
-    cd firebase/functions
-    npm run emulator
-    cd ..
-    
+    # cd firebase/functions
+    # npm run emulator
+    # cd ..
+
     cd app
-    npm run start-local
+    npm run start
     cd ..
-else 
-    cd app 
+else
+    cd app
     npm start
     cd ..
 fi
